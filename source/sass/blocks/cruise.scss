@@ -1,0 +1,153 @@
+.cruise {
+  padding: 111px 118px 120px;
+
+  @include vp-1365 {
+    padding: 91px 60px 100px;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    padding: 59px 25px;
+  }
+}
+
+.cruise h2 {
+  margin: 0;
+  margin-bottom: 49px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.07em;
+
+  @include vp-1365 {
+    margin-bottom: 49px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.cruise__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cruise__card {
+  display: flex;
+  align-items: flex-end;
+  width: 260px;
+  height: 386px;
+  padding: 30px;
+  padding-bottom: 22px;
+  color: $color-default-white;
+  background: $black-to-bottom;
+  background-size: cover;
+
+  @include vp-1365 {
+    width: 309px;
+    padding: 30px 36px 27px;
+  }
+
+  @include vp-767 {
+    width: 270px;
+    padding: 25px;
+    padding-bottom: 17px;
+  }
+}
+
+.cruise__card--astoria {
+  background-image: url('../img/cruise_astoria.jpg');
+}
+
+.cruise__card--elain {
+  background-image: url('../img/cruise_astoria.jpg');
+}
+
+.cruise__card--atlantis {
+  background-image: url('../img/cruise_atlantis.jpg');
+}
+
+.cruise__card--odisseus {
+  background-image: url('../img/cruise_odisseus.jpg');
+}
+
+.cruise__card--olympia {
+  background-image: url('../img/cruise_olympia.jpg');
+}
+
+.cruise__card--aurora {
+  background-image: url('../img/cruise_aurora.jpg');
+}
+
+.cruise__card--leonor {
+  background-image: url('../img/cruise_leonor.jpg');
+}
+
+.cruise__card--minion-1 {
+  background-image: url('../img/cruise_minion_1.jpg');
+}
+
+.cruise__card h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.08em;
+}
+
+.cruise__info {
+  display: none;
+}
+
+.cruise__info dl {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.cruise__info dt {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.cruise__info dd {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d8d8d9;
+}
+
+.cruise__info dd:last-child {
+  margin: 0;
+}
+
+.cruise__card:hover {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+  background: $color-default-black;
+}
+
+.cruise__card:hover .cruise__info {
+  display: flex;
+  flex-direction: column;
+}

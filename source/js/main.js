@@ -1,3 +1,5 @@
+/* eslint-disable no-invalid-this */
+/* eslint-disable no-undef */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 

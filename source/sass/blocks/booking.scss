@@ -1,0 +1,116 @@
+.booking {
+  min-height: 555px;
+  padding: 50px 60px;
+  background-image: url('../img/booking.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1365 {
+    padding: 88px 132px
+  }
+}
+
+.booking__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1365 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.booking__text {
+  margin-right: 50px;
+
+  @include vp-1365 {
+    margin: 0;
+    margin-bottom: 52px;
+  }
+}
+
+.booking__text h2 {
+  margin: 163px 0 10px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.07em;
+
+  @include vp-1365 {
+    margin: 0 0 5px;
+    font-size: 34px;
+    line-height: 51px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.booking__text p {
+  //max-width: 352px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.06em;
+
+  @include vp-1365 {
+    text-align: center;
+  }
+}
+
+.booking form {
+  display: flex;
+  flex-direction: column;
+  width: 403px;
+  height: 455px;
+  padding: 45px 50px;
+  background-color: $color-default-black;
+}
+
+.booking form p {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: $color-default-white;
+  letter-spacing: 0.06em;
+}
+
+.booking label {
+  position: relative;
+  margin-bottom: 18px;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-default-white;
+}
+
+.booking input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.08em;
+}
+
+.booking input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 15px 14px;
+}
+
+.booking__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: $color-default-white;
+}
+
+.booking__label {
+  padding-left: 23px;
+  letter-spacing: 0.06em;
+}
+
+.booking button {
+  margin-top: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+}
