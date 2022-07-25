@@ -10,6 +10,10 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  @include vp-1365 {
+    padding-top: 47px;
+  }
+
   @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
@@ -26,7 +30,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
   }
 }
 
@@ -45,16 +49,24 @@
 
 .page-footer__menu-wrapper ul {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
 
   @include vp-767 {
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
   }
 }
 
 .page-footer__menu-wrapper li {
+  margin-right: 16px;
+
+  @include vp-1365 {
+    margin-right: 5px;
+  }
+
   @include vp-767 {
-    margin-bottom: 23px;
+    margin-bottom: 8px;
   }
 }
 
@@ -69,34 +81,44 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  letter-spacing: 0.08em;
 
   @include vp-1365 {
     font-size: 12px;
     line-height: 15px;
   }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
 }
 
 .page-footer__social-wrapper {
+  align-self: flex-end;
   margin-left: auto;
 
   @include vp-767 {
+    align-self: flex-start;
     margin: 0;
   }
 }
 
 .page-footer__social-wrapper ul {
-  display: flex;
-}
-
-.page-footer__social-wrapper li {
-  margin-right: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 110px;
 
   @include vp-1365 {
-    margin-right: 23px;
+    gap: 22px;
+  }
+
+  @include vp-767 {
+    gap: 18px;
   }
 }
 
-.page-footer__social-wrapper li:last-child {
+.page-footer__social-wrapper li:nth-child(3n) {
   margin-right: 0;
 }
 

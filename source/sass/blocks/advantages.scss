@@ -1,8 +1,14 @@
 .advantages {
   padding-top: 110px;
   padding-bottom: 120px;
+  background-color: #d7e5f4;
+  background-image: url('../img/advantage_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include retina {
+    background-image: url('../img/advantage_bg@2x.jpg');
+  }
 
   @include vp-1365 {
     padding-top: 91px;

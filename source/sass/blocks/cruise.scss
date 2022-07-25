@@ -7,7 +7,7 @@
 
   @include vp-767 {
     width: 320px;
-    padding: 59px 25px;
+    padding: 59px 25px 65px;
   }
 }
 
@@ -51,7 +51,7 @@
   display: flex;
   align-items: flex-end;
   width: 260px;
-  height: 386px;
+  min-height: 386px;
   padding: 30px;
   padding-bottom: 22px;
   color: $color-default-white;
@@ -72,34 +72,66 @@
 
 .cruise__card--astoria {
   background-image: url('../img/cruise_astoria.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_astoria@2x.jpg');
+  }
 }
 
 .cruise__card--elain {
   background-image: url('../img/cruise_astoria.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_astoria@2x.jpg');
+  }
 }
 
 .cruise__card--atlantis {
   background-image: url('../img/cruise_atlantis.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_atlantis@2x.jpg');
+  }
 }
 
 .cruise__card--odisseus {
   background-image: url('../img/cruise_odisseus.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_odisseus@2x.jpg');
+  }
 }
 
 .cruise__card--olympia {
   background-image: url('../img/cruise_olympia.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_olympia@2x.jpg');
+  }
 }
 
 .cruise__card--aurora {
   background-image: url('../img/cruise_aurora.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_aurora@2x.jpg');
+  }
 }
 
 .cruise__card--leonor {
   background-image: url('../img/cruise_leonor.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_leonor@2x.jpg');
+  }
 }
 
 .cruise__card--minion-1 {
   background-image: url('../img/cruise_minion_1.jpg');
+
+  @include retina {
+    background-image: url('../img/cruise_minion_1@2x.jpg');
+  }
 }
 
 .cruise__card h3 {

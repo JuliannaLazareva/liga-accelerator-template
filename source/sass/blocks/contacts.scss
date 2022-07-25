@@ -1,0 +1,122 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1365 {
+    grid-template-columns: 324px 324px;
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 320px;
+    padding-top: 58px;
+    padding-bottom: 72px;
+  }
+}
+
+.contacts__map,
+.contacts__map iframe {
+  width: 560px;
+  height: 306px;
+
+  @include vp-1919 {
+    background-image: url('../img/map_desktop.png');
+
+    @include retina {
+      background-image: url('../img/map_desktop@2x.png');
+    }
+  }
+
+
+  @include vp-1365 {
+    width: 324px;
+    height: 335px;
+    background-image: url('../img/map_tablet.png');
+
+    @include retina {
+      background-image: url('../img/map_tablet@2x.png');
+    }
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 316px;
+  }
+}
+
+.contacts__text {
+  max-width: 500px;
+  padding-top: 74px;
+  letter-spacing: 0.08em;
+
+  @include vp-1365 {
+    padding-top: 65px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.contacts__text br {
+  display: none;
+
+  @include vp-1365 {
+    display: block;
+  }
+}
+
+.contacts__text h3 {
+  margin: 0;
+  margin-bottom: 33px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+
+  @include vp-1365 {
+    margin-bottom: 27px;
+  }
+}
+
+.contacts__text address {
+  letter-spacing: 0.05em;
+}
+
+.contacts__text address,
+.contacts__text span {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 28px;
+  font-style: normal;
+}
+
+.contacts__text address::before,
+.contacts__text span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 22px;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.contacts__text address::before {
+  background-image: url('../img/map_icon.svg');
+
+  @include vp-1365 {
+    top: 5px;
+  }
+}
+
+.contacts__text span::before {
+  background-image: url('../img/phone_icon.svg');
+
+}
