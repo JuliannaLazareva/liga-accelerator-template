@@ -52,16 +52,18 @@
     background-color: $color-default-white;
   }
 
-  .main-nav--opened + .page-header__logo-wrapper  {
+  .main-nav--opened + .page-header__logo-wrapper {
     display: none;
   }
 
-  .main-nav--opened .main-nav__logo {
+  .main-nav--opened .main-nav__logo,
+  .main-nav--nojs .main-nav__logo {
     display: block;
     padding: 15px 20px;
   }
 
-  .main-nav--opened .main-nav__logo svg {
+  .main-nav--opened svg,
+  .main-nav--nojs svg {
     fill: $color-default-black;
   }
 
@@ -83,9 +85,12 @@
   }
 
   .main-nav--nojs ul {
-    position: static;
+    position: absolute;
     display: block;
+    top: 0;
+    right: 0;
     min-height: 0;
+    padding-top: 80px;
     color: $color-default-black;
     background-color: $color-default-white;
   }

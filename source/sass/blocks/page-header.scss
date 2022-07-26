@@ -55,7 +55,7 @@
   }
 }
 
-.page-header__menu-wrapper.main-nav--opened + .page-header__logo-wrapper {
+.main-nav--opened + .page-header__logo-wrapper {
   display: none;
 }
 
@@ -70,10 +70,10 @@
 }
 
 .page-header__menu-wrapper li {
-  margin-right: 33px;
+  margin-right: 36px;
 
   @include vp-1365 {
-    margin-right: 24px;
+    margin-right: 26px;
   }
 
   @include vp-767 {
@@ -92,7 +92,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.09em;
 
   @include vp-1365 {
     font-size: 14px;

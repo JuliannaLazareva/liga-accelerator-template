@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
 }
 
 *,
@@ -419,7 +419,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Monserrat", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -643,6 +643,7 @@ button,
   color: #011c40;
   background-color: #f9fbfd;
   text-align: center;
+  vertical-align: baseline;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -693,7 +694,7 @@ button,
   order: 1;
 }
 
-.page-header__menu-wrapper.main-nav--opened + .page-header__logo-wrapper {
+.main-nav--opened + .page-header__logo-wrapper {
   display: none;
 }
 
@@ -706,7 +707,7 @@ button,
 }
 
 .page-header__menu-wrapper li {
-  margin-right: 33px;
+  margin-right: 36px;
 }
 
 .page-header__menu-wrapper li:last-child {
@@ -719,7 +720,6 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.09em;
 }
 
 .main-nav__logo {
@@ -822,7 +822,6 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.08em;
 }
 
 .page-footer__social-wrapper {
@@ -844,7 +843,7 @@ button,
   margin-right: 0;
 }
 
-.page-footer__social-wrapper li svg {
+.page-footer__social-wrapper svg {
   width: 20px;
   height: 20px;
 }
@@ -871,7 +870,7 @@ button,
   font-weight: 700;
   line-height: 66px;
   color: #f9fbfd;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.04em;
 }
 
 .main-screen p {
@@ -880,7 +879,6 @@ button,
   font-size: 20px;
   line-height: 24px;
   color: #f9fbfd;
-  letter-spacing: 0.09em;
 }
 
 .directions {
@@ -890,7 +888,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 120px;
+  padding-top: 96px;
   padding-bottom: 120px;
 }
 
@@ -920,14 +918,17 @@ button,
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 
 .directions__wrapper p {
   max-width: 512px;
   margin: 0;
   padding: 0;
-  letter-spacing: 0.07em;
+}
+
+.directions__wrapper br {
+  display: none;
 }
 
 .advantages {
@@ -945,7 +946,7 @@ button,
   font-weight: 600;
   line-height: 42px;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 
 .advantages__wrapper {
@@ -1005,14 +1006,13 @@ button,
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.01em;
 }
 
 .advantages__block p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.07em;
 }
 
 .advantages__block--cruise-ship p {
@@ -1042,7 +1042,7 @@ button,
   font-weight: 600;
   line-height: 42px;
   text-align: center;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.02em;
 }
 
 .cruise__wrapper {
@@ -1054,16 +1054,14 @@ button,
 }
 
 .cruise__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  width: 260px;
   min-height: 386px;
-  padding: 30px;
-  padding-bottom: 22px;
   color: #f9fbfd;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011C40));
   background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011C40 100%);
@@ -1071,45 +1069,21 @@ button,
   background-size: cover;
 }
 
-.cruise__card--astoria {
-  background-image: url("../img/cruise_astoria.jpg");
-}
-
-.cruise__card--elain {
-  background-image: url("../img/cruise_astoria.jpg");
-}
-
-.cruise__card--atlantis {
-  background-image: url("../img/cruise_atlantis.jpg");
-}
-
-.cruise__card--odisseus {
-  background-image: url("../img/cruise_odisseus.jpg");
-}
-
-.cruise__card--olympia {
-  background-image: url("../img/cruise_olympia.jpg");
-}
-
-.cruise__card--aurora {
-  background-image: url("../img/cruise_aurora.jpg");
-}
-
-.cruise__card--leonor {
-  background-image: url("../img/cruise_leonor.jpg");
-}
-
-.cruise__card--minion-1 {
-  background-image: url("../img/cruise_minion_1.jpg");
+.cruise__card img {
+  width: 260px;
+  height: 386px;
 }
 
 .cruise__card h3 {
+  position: absolute;
+  left: 30px;
+  bottom: 22px;
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
 }
 
 .cruise__info {
@@ -1117,12 +1091,11 @@ button,
 }
 
 .cruise__info dl {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 8px 0 29px;
 }
 
 .cruise__info dt {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -1130,7 +1103,7 @@ button,
 
 .cruise__info dd {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
@@ -1151,8 +1124,19 @@ button,
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding: 20px;
+  padding: 36px 25px;
   background: #011c40;
+}
+
+.cruise__card:hover img {
+  display: none;
+}
+
+.cruise__card:hover h3 {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  top: -7px;
 }
 
 .cruise__card:hover .cruise__info {
@@ -1163,6 +1147,10 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.cruise__card button {
+  padding: 9px;
 }
 
 .booking {
@@ -1194,7 +1182,7 @@ button,
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.02em;
 }
 
 .booking__text p {
@@ -1202,7 +1190,6 @@ button,
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 27px;
-  letter-spacing: 0.06em;
 }
 
 .booking form {
@@ -1219,61 +1206,58 @@ button,
   background-color: #011c40;
 }
 
-.booking form br {
+.booking__form br {
   display: none;
 }
 
-.booking form p {
+.booking__form p {
   margin: 0;
   margin-bottom: 25px;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
   color: #f9fbfd;
-  letter-spacing: 0.06em;
 }
 
-.booking label {
+.booking__form label {
   position: relative;
-  margin-bottom: 18px;
   font-size: 10px;
   line-height: 13px;
   color: #f9fbfd;
 }
 
-.booking input::-webkit-input-placeholder {
+.booking__form input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0.08em;
 }
 
-.booking input::-moz-placeholder {
+.booking__form input::-moz-placeholder {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0.08em;
 }
 
-.booking input:-ms-input-placeholder {
+.booking__form input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0.08em;
 }
 
-.booking input::-ms-input-placeholder {
+.booking__form input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0.08em;
 }
 
-.booking input::placeholder {
+.booking__form input::placeholder {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0.08em;
 }
 
-.booking input:not([type="checkbox"]) {
+.booking__form input {
+  margin-bottom: 18px;
+}
+
+.booking__form input:not([type="checkbox"]) {
   width: 100%;
-  padding: 15px 14px;
+  padding: 12px 14px;
 }
 
 .booking__mark {
@@ -1287,14 +1271,14 @@ button,
 
 .booking__label {
   display: inline-block;
+  vertical-align: baseline;
   padding-left: 23px;
   font-size: 10px;
   line-height: 13px;
-  letter-spacing: 0.06em;
 }
 
 .booking button {
-  margin-top: 16px;
+  margin-top: 35px;
   padding-top: 11px;
   padding-bottom: 11px;
   text-align: center;
@@ -1319,7 +1303,6 @@ button,
 .contacts__text {
   max-width: 500px;
   padding-top: 74px;
-  letter-spacing: 0.08em;
 }
 
 .contacts__text br {
@@ -1332,10 +1315,7 @@ button,
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-}
-
-.contacts__text address {
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
 }
 
 .contacts__text address,
@@ -1436,7 +1416,7 @@ button,
   }
 
   .booking {
-    background-image: url("/source/img/booking_desktop@2x.jpg");
+    background-image: url("../img/booking_desktop@2x.jpg");
   }
 
   .contacts__map,
@@ -1462,7 +1442,7 @@ button,
   }
 
   .page-header__menu-wrapper li {
-    margin-right: 24px;
+    margin-right: 26px;
   }
 
   .page-header__menu-wrapper a {
@@ -1495,7 +1475,7 @@ button,
     gap: 22px;
   }
 
-  .page-footer__social-wrapper li svg {
+  .page-footer__social-wrapper svg {
     width: 16px;
     height: 16px;
   }
@@ -1519,7 +1499,7 @@ button,
   }
 
   .directions {
-    padding-top: 92px;
+    padding-top: 68px;
     padding-bottom: 93px;
   }
 
@@ -1529,6 +1509,10 @@ button,
 
   .directions__wrapper {
     width: 324px;
+  }
+
+  .directions__wrapper--content {
+    padding-top: 0;
   }
 
   .directions__wrapper--background {
@@ -1545,6 +1529,10 @@ button,
 
   .directions__wrapper p {
     max-width: 322px;
+  }
+
+  .directions__wrapper br {
+    display: block;
   }
 
   .advantages {
@@ -1597,7 +1585,7 @@ button,
   }
 
   .advantages__block--all-inclusive p {
-    width: 159px;
+    width: 170px;
   }
 
   .advantages__block--all-inclusive br {
@@ -1605,7 +1593,7 @@ button,
   }
 
   .advantages__block--zodiac-ship p {
-    width: 165px;
+    width: 169px;
   }
 
   .advantages__block--zodiac-ship br {
@@ -1629,7 +1617,19 @@ button,
 
   .cruise__card {
     width: 309px;
-    padding: 30px 36px 27px;
+  }
+
+  .cruise__card img {
+    width: 309px;
+  }
+
+  .cruise__card h3 {
+    left: 35px;
+    bottom: 27px;
+  }
+
+  .cruise__card:hover {
+    padding: 36px;
   }
 
   .booking {
@@ -1642,6 +1642,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1649,14 +1651,14 @@ button,
 
   .booking__text {
     margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: 41px;
+    padding: 0;
   }
 
   .booking__text h2 {
     margin: 0 0 5px;
     font-size: 34px;
     line-height: 51px;
-    letter-spacing: 0.06em;
   }
 
   .booking__text p {
@@ -1795,12 +1797,14 @@ button,
     display: none;
   }
 
-  .main-nav--opened .main-nav__logo {
+  .main-nav--opened .main-nav__logo,
+  .main-nav--nojs .main-nav__logo {
     display: block;
     padding: 15px 20px;
   }
 
-  .main-nav--opened .main-nav__logo svg {
+  .main-nav--opened svg,
+  .main-nav--nojs svg {
     fill: #011c40;
   }
 
@@ -1822,9 +1826,12 @@ button,
   }
 
   .main-nav--nojs ul {
-    position: static;
+    position: absolute;
     display: block;
+    top: 0;
+    right: 0;
     min-height: 0;
+    padding-top: 80px;
     color: #011c40;
     background-color: #f9fbfd;
   }
@@ -1907,7 +1914,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 57px;
+    padding-top: 33px;
     padding-bottom: 65px;
   }
 
@@ -1927,8 +1934,13 @@ button,
 
   .directions__wrapper h2 {
     margin-bottom: 14px;
+    padding-right: 90px;
     font-size: 24px;
     line-height: 34px;
+  }
+
+  .directions__wrapper br {
+    display: none;
   }
 
   .advantages h2 {
@@ -1961,7 +1973,7 @@ button,
   }
 
   .advantages__block h3 {
-    width: 209px;
+    width: 200px;
     margin-bottom: 8px;
   }
 
@@ -1978,7 +1990,7 @@ button,
   }
 
   .advantages__block--zodiac-ship p {
-    width: 231px;
+    width: 250px;
   }
 
   .advantages__block--zodiac-ship br {
@@ -2003,8 +2015,19 @@ button,
 
   .cruise__card {
     width: 270px;
-    padding: 25px;
-    padding-bottom: 17px;
+  }
+
+  .cruise__card img {
+    width: 270px;
+  }
+
+  .cruise__card h3 {
+    left: 26px;
+    bottom: 17px;
+  }
+
+  .cruise__card:hover {
+    padding: 36px 25px;
   }
 
   .booking {
@@ -2024,6 +2047,7 @@ button,
   }
 
   .booking__text p {
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2032,11 +2056,11 @@ button,
     padding: 34px 29px 40px;
   }
 
-  .booking form br {
+  .booking__form br {
     display: block;
   }
 
-  .booking form p {
+  .booking__form p {
     margin-bottom: 27px;
     line-height: 25px;
     text-align: center;
@@ -2049,7 +2073,7 @@ button,
   }
 
   .booking button {
-    margin-top: 8px;
+    margin-top: 26px;
   }
 
   .contacts {
@@ -2074,6 +2098,10 @@ button,
   .contacts__text {
     padding: 0;
   }
+
+  .contacts__text h3 {
+    padding-right: 5px;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
@@ -2093,37 +2121,5 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .advantages {
     background-image: url("../img/advantage_bg@2x.jpg");
-  }
-
-  .cruise__card--astoria {
-    background-image: url("../img/cruise_astoria@2x.jpg");
-  }
-
-  .cruise__card--elain {
-    background-image: url("../img/cruise_astoria@2x.jpg");
-  }
-
-  .cruise__card--atlantis {
-    background-image: url("../img/cruise_atlantis@2x.jpg");
-  }
-
-  .cruise__card--odisseus {
-    background-image: url("../img/cruise_odisseus@2x.jpg");
-  }
-
-  .cruise__card--olympia {
-    background-image: url("../img/cruise_olympia@2x.jpg");
-  }
-
-  .cruise__card--aurora {
-    background-image: url("../img/cruise_aurora@2x.jpg");
-  }
-
-  .cruise__card--leonor {
-    background-image: url("../img/cruise_leonor@2x.jpg");
-  }
-
-  .cruise__card--minion-1 {
-    background-image: url("../img/cruise_minion_1@2x.jpg");
   }
 }

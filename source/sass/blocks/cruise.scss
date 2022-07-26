@@ -18,7 +18,7 @@
   font-weight: 600;
   line-height: 42px;
   text-align: center;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.02em;
 
   @include vp-1365 {
     margin-bottom: 49px;
@@ -48,99 +48,56 @@
 }
 
 .cruise__card {
+  position: relative;
   display: flex;
   align-items: flex-end;
-  width: 260px;
   min-height: 386px;
-  padding: 30px;
-  padding-bottom: 22px;
   color: $color-default-white;
   background: $black-to-bottom;
   background-size: cover;
 
   @include vp-1365 {
     width: 309px;
-    padding: 30px 36px 27px;
   }
 
   @include vp-767 {
     width: 270px;
-    padding: 25px;
-    padding-bottom: 17px;
   }
 }
 
-.cruise__card--astoria {
-  background-image: url('../img/cruise_astoria.jpg');
+.cruise__card img {
+  width: 260px;
+  height: 386px;
 
-  @include retina {
-    background-image: url('../img/cruise_astoria@2x.jpg');
+  @include vp-1365 {
+    width: 309px;
   }
-}
 
-.cruise__card--elain {
-  background-image: url('../img/cruise_astoria.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_astoria@2x.jpg');
-  }
-}
-
-.cruise__card--atlantis {
-  background-image: url('../img/cruise_atlantis.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_atlantis@2x.jpg');
-  }
-}
-
-.cruise__card--odisseus {
-  background-image: url('../img/cruise_odisseus.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_odisseus@2x.jpg');
-  }
-}
-
-.cruise__card--olympia {
-  background-image: url('../img/cruise_olympia.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_olympia@2x.jpg');
-  }
-}
-
-.cruise__card--aurora {
-  background-image: url('../img/cruise_aurora.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_aurora@2x.jpg');
-  }
-}
-
-.cruise__card--leonor {
-  background-image: url('../img/cruise_leonor.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_leonor@2x.jpg');
-  }
-}
-
-.cruise__card--minion-1 {
-  background-image: url('../img/cruise_minion_1.jpg');
-
-  @include retina {
-    background-image: url('../img/cruise_minion_1@2x.jpg');
+  @include vp-767 {
+    width: 270px;
   }
 }
 
 .cruise__card h3 {
+  position: absolute;
+  left: 30px;
+  bottom: 22px;
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
+
+  @include vp-1365 {
+    left: 35px;
+    bottom: 27px;
+  }
+
+  @include vp-767 {
+    left: 26px;
+    bottom: 17px;
+  }
 }
 
 .cruise__info {
@@ -148,12 +105,11 @@
 }
 
 .cruise__info dl {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 8px 0 29px;
 }
 
 .cruise__info dt {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -161,7 +117,7 @@
 
 .cruise__info dd {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
@@ -175,11 +131,34 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  padding: 20px;
+  padding: 36px 25px;
   background: $color-default-black;
+
+  @include vp-1365 {
+    padding: 36px;
+  }
+
+  @include vp-767 {
+    padding: 36px 25px;
+  }
+}
+
+.cruise__card:hover img {
+  display: none;
+}
+
+.cruise__card:hover h3 {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  top: -7px;
 }
 
 .cruise__card:hover .cruise__info {
   display: flex;
   flex-direction: column;
+}
+
+.cruise__card button {
+  padding: 9px;
 }

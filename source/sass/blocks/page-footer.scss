@@ -81,7 +81,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.08em;
 
   @include vp-1365 {
     font-size: 12px;
@@ -122,7 +121,7 @@
   margin-right: 0;
 }
 
-.page-footer__social-wrapper li svg {
+.page-footer__social-wrapper svg {
   width: 20px;
   height: 20px;
 

@@ -7,7 +7,7 @@
     <meta name="description" content="Описание проекта">
     <title>Cruises to Antarctica</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
@@ -63,7 +63,7 @@
         <section class="directions container" id="directions">
           <div class="directions__wrapper directions__wrapper--content">
             <h2>Путешествие <br>на край Земли</h2>
-            <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе <br>с удивительным миром Антарктики. Наш круизный лайнер отвезет вас <br>на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
           </div>
           <div class="directions__wrapper directions__wrapper--background"></div>
         </section>
@@ -89,10 +89,13 @@
         <section class="cruise container" id="cruise">
           <h2>Ближайшие круизы</h2>
           <ul class="cruise__wrapper">
-            <li class="cruise__card cruise__card--astoria">
-              <a href="#">
-                <h3>Круиз “Астория”</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_astoria.webp 1x, img/cruise_astoria@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_astoria.jpg" srcset="img/cruise_astoria@2x.jpg" width="260" height="386" alt="Круиз Астория">
+              </picture>
+              <h3>Круиз “Астория”</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -107,10 +110,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--elain">
-              <a href="#">
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_astoria.webp 1x, img/cruise_astoria@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_astoria.jpg" srcset="img/cruise_astoria@2x.jpg" width="260" height="386" alt="Круиз Элайн">
+              </picture>
                 <h3>Круиз “Элайн”</h3>
-              </a>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -125,10 +131,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--atlantis">
-              <a href="#">
-                <h3>Круиз "Атлантис"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_atlantis.webp 1x, img/cruise_atlantis@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_atlantis.jpg" srcset="img/cruise_atlantis@2x.jpg" width="260" height="386" alt="Круиз Атлантис">
+              </picture>
+              <h3>Круиз "Атлантис"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -143,10 +152,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--odisseus">
-              <a href="#">
-                <h3>Круиз "Одиссей"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_odisseus.webp 1x, img/cruise_odisseus@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_odisseus.jpg" srcset="img/cruise_odisseus@2x.jpg" width="260" height="386" alt="Круиз Одиссей">
+              </picture>
+              <h3>Круиз "Одиссей"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -161,10 +173,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--olympia">
-              <a href="#">
-                <h3>Круиз "Олимпия"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_olympia.webp 1x, img/cruise_olympia@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_olympia.jpg" srcset="img/cruise_olympia@2x.jpg" width="260" height="386" alt="Круиз Олимпия">
+              </picture>
+              <h3>Круиз "Олимпия"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -179,10 +194,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--aurora">
-              <a href="#">
-                <h3>Круиз "Аврора"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_aurora.webp 1x, img/cruise_aurora@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_aurora.jpg" srcset="img/cruise_aurora@2x.jpg" width="260" height="386" alt="Круиз Аврора">
+              </picture>
+              <h3>Круиз "Аврора"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -197,10 +215,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--leonor">
-              <a href="#">
-                <h3>Круиз "Леонор"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_leonor.webp 1x, img/cruise_leonor@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_leonor.jpg" srcset="img/cruise_leonor@2x.jpg" width="260" height="386" alt="Круиз Леонор">
+              </picture>
+              <h3>Круиз "Леонор"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -215,10 +236,13 @@
                 <button class="button" type="submit">Забронировать</button>
               </div>
             </li>
-            <li class="cruise__card cruise__card--minion-1">
-              <a href="#">
-                <h3>Круиз "Минион - 1"</h3>
-              </a>
+            <li class="cruise__card">
+              <picture>
+                <source type="image/webp" srcset="img/cruise_minion_1.webp 1x, img/cruise_minion_1@2x.webp 2x">
+                <!-- 1х: 260px; 2x: 520px -->
+                <img src="img/cruise_minion_1.jpg" srcset="img/cruise_minion_1@2x.jpg" width="260" height="386" alt="Круиз Минион - 1">
+              </picture>
+              <h3>Круиз "Минион - 1"</h3>
               <div class="cruise__info">
                 <dl>
                   <dt>Маршрут</dt>
@@ -241,17 +265,15 @@
               <h2>Раннее бронирование</h2>
               <p>Забронируйте тур за 3-6 месяцев <br>до даты выезда и сэкономьте до 50%</p>
             </div>
-            <form>
+            <form class="booking__form">
               <p>Оставьте заявку <br>и мы свяжемся с вами <br>в ближайшее время</p>
-              <label>
-                <input type="text" name="user-name" placeholder="Имя">
-              </label>
-              <label>
-                <input type="tel" name="tel" placeholder="Телефон" pattern="[0-9]{11}">
-              </label>
-              <label>
-                <input type="email" name="E-mail" placeholder="Email">
-              </label>
+              <label for="user-name" class="visually-hidden">Ваше имя:</label>
+              <input id="user-name" type="text" name="user-name" placeholder="Имя">
+              <label for="user-phone" class="visually-hidden">Ваш телефон:</label>
+                <input id="user-phone" type="tel" name="tel" placeholder="Телефон" pattern="[0-9]{11}">
+              <label for="e-mail" class="visually-hidden">Ваш E-mail:</label>
+                <input id="e-mail" type="email" name="E-mail" placeholder="Email">
+
               <label>
                 <input class="visually-hidden" type="checkbox" checked>
                 <span class="booking__mark"></span>
@@ -280,7 +302,7 @@
         <div class="page-footer__wrapper container">
           <div class="page-footer__logo-wrapper">
             <a href="#">
-              <img src="img/logo.svg" alt="" width="70" height="38">
+              <img src="img/logo.svg" alt="Логотип компании 'Круизы в Антарктику'." width="70" height="38">
             </a>
           </div>
           <div class="page-footer__menu-wrapper">
@@ -332,21 +354,5 @@
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
   </body>
 </html>
