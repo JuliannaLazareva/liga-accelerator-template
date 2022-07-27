@@ -90,15 +90,20 @@
 
 
 .contacts__text address,
-.contacts__text span {
+.contacts__text a {
   position: relative;
   margin-bottom: 20px;
   padding-left: 28px;
   font-style: normal;
 }
 
+.contacts__text a {
+  color: $color-default-black;
+  cursor: pointer;
+}
+
 .contacts__text address::before,
-.contacts__text span::before {
+.contacts__text a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -116,7 +121,7 @@
   }
 }
 
-.contacts__text span::before {
+.contacts__text a::before {
   background-image: url('../img/phone_icon.svg');
 
 }

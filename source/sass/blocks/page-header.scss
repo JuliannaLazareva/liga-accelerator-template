@@ -103,4 +103,8 @@
     line-height: 22px;
     color: $color-default-black;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

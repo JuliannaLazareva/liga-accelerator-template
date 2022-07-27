@@ -17,14 +17,6 @@
   }
 }
 
-.directions br {
-  display: none;
-
-  @include vp-1365 {
-    display: block;
-  }
-}
-
 .directions__wrapper {
   width: 560px;
 
@@ -103,6 +95,7 @@
   letter-spacing: 0.02em;
 
   @include vp-1365 {
+    max-width: 300px;
     margin-bottom: 15px;
     font-size: 26px;
     line-height: 36px;
@@ -123,17 +116,5 @@
 
   @include vp-1365 {
     max-width: 322px;
-  }
-}
-
-.directions__wrapper br {
-  display: none;
-
-  @include vp-1365 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }

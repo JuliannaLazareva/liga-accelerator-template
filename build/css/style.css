@@ -443,6 +443,10 @@ li {
 a {
   color: #f9fbfd;
   text-decoration: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img,
@@ -465,6 +469,10 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input::-webkit-input-placeholder,
@@ -646,6 +654,10 @@ button,
   vertical-align: baseline;
   border: none;
   cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -720,6 +732,10 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+}
+
+.page-header__menu-wrapper a:hover {
+  opacity: 0.8;
 }
 
 .main-nav__logo {
@@ -824,6 +840,10 @@ button,
   line-height: 20px;
 }
 
+.page-footer__menu-wrapper a:hover {
+  opacity: 0.8;
+}
+
 .page-footer__social-wrapper {
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -846,6 +866,10 @@ button,
 .page-footer__social-wrapper svg {
   width: 20px;
   height: 20px;
+}
+
+.page-footer__social-wrapper svg:hover {
+  opacity: 0.8;
 }
 
 .main-screen {
@@ -892,10 +916,6 @@ button,
   padding-bottom: 120px;
 }
 
-.directions br {
-  display: none;
-}
-
 .directions__wrapper {
   width: 560px;
 }
@@ -925,10 +945,6 @@ button,
   max-width: 512px;
   margin: 0;
   padding: 0;
-}
-
-.directions__wrapper br {
-  display: none;
 }
 
 .advantages {
@@ -1002,7 +1018,7 @@ button,
 
 .advantages__block h3 {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
@@ -1025,10 +1041,6 @@ button,
 
 .advantages__block--zodiac-ship p {
   width: 248px;
-}
-
-.advantages__block--zodiac-ship br {
-  display: none;
 }
 
 .cruise {
@@ -1124,7 +1136,7 @@ button,
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding: 36px 25px;
+  padding: 20px 25px;
   background: #011c40;
 }
 
@@ -1186,6 +1198,7 @@ button,
 }
 
 .booking__text p {
+  max-width: 350px;
   margin: 0;
   margin-bottom: 10px;
   font-size: 18px;
@@ -1206,7 +1219,7 @@ button,
   background-color: #011c40;
 }
 
-.booking__form br {
+.booking br {
   display: none;
 }
 
@@ -1252,7 +1265,13 @@ button,
 }
 
 .booking__form input {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  border: none;
+}
+
+.booking__form input:hover,
+.booking__form input:focus {
+  opacity: 0.8;
 }
 
 .booking__form input:not([type="checkbox"]) {
@@ -1269,6 +1288,20 @@ button,
   background-color: #f9fbfd;
 }
 
+input[type="checkbox"]:checked + .booking__mark::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 6px;
+  border-left: 2px solid #011c40;
+  border-bottom: 2px solid #011c40;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  content: "";
+}
+
 .booking__label {
   display: inline-block;
   vertical-align: baseline;
@@ -1279,8 +1312,8 @@ button,
 
 .booking button {
   margin-top: 35px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -1319,15 +1352,20 @@ button,
 }
 
 .contacts__text address,
-.contacts__text span {
+.contacts__text a {
   position: relative;
   margin-bottom: 20px;
   padding-left: 28px;
   font-style: normal;
 }
 
+.contacts__text a {
+  color: #011c40;
+  cursor: pointer;
+}
+
 .contacts__text address::before,
-.contacts__text span::before {
+.contacts__text a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1341,7 +1379,7 @@ button,
   background-image: url("../img/map_icon.svg");
 }
 
-.contacts__text span::before {
+.contacts__text a::before {
   background-image: url("../img/phone_icon.svg");
 }
 
@@ -1503,10 +1541,6 @@ button,
     padding-bottom: 93px;
   }
 
-  .directions br {
-    display: block;
-  }
-
   .directions__wrapper {
     width: 324px;
   }
@@ -1522,6 +1556,7 @@ button,
   }
 
   .directions__wrapper h2 {
+    max-width: 300px;
     margin-bottom: 15px;
     font-size: 26px;
     line-height: 36px;
@@ -1529,10 +1564,6 @@ button,
 
   .directions__wrapper p {
     max-width: 322px;
-  }
-
-  .directions__wrapper br {
-    display: block;
   }
 
   .advantages {
@@ -1552,11 +1583,7 @@ button,
 
   .advantages__block {
     width: 206px;
-    padding: 72px 15px 19px 20px;
-  }
-
-  .advantages__block br {
-    display: none;
+    padding: 70px 15px 19px 20px;
   }
 
   .advantages__block--cruise-ship::before {
@@ -1588,16 +1615,8 @@ button,
     width: 170px;
   }
 
-  .advantages__block--all-inclusive br {
-    display: none;
-  }
-
   .advantages__block--zodiac-ship p {
     width: 169px;
-  }
-
-  .advantages__block--zodiac-ship br {
-    display: block;
   }
 
   .cruise {
@@ -1626,10 +1645,6 @@ button,
   .cruise__card h3 {
     left: 35px;
     bottom: 27px;
-  }
-
-  .cruise__card:hover {
-    padding: 36px;
   }
 
   .booking {
@@ -1662,7 +1677,13 @@ button,
   }
 
   .booking__text p {
+    max-width: 365px;
+    margin: 0 25px 10px;
     text-align: center;
+  }
+
+  .booking__form p {
+    margin-bottom: 28px;
   }
 
   .contacts {
@@ -1939,10 +1960,6 @@ button,
     line-height: 34px;
   }
 
-  .directions__wrapper br {
-    display: none;
-  }
-
   .advantages h2 {
     margin-bottom: 30px;
     font-size: 24px;
@@ -1968,10 +1985,6 @@ button,
     padding-bottom: 19px;
   }
 
-  .advantages__block br {
-    display: block;
-  }
-
   .advantages__block h3 {
     width: 200px;
     margin-bottom: 8px;
@@ -1982,19 +1995,11 @@ button,
   }
 
   .advantages__block--all-inclusive p {
-    width: 210px;
-  }
-
-  .advantages__block--all-inclusive br {
-    display: block;
+    width: 220px;
   }
 
   .advantages__block--zodiac-ship p {
     width: 250px;
-  }
-
-  .advantages__block--zodiac-ship br {
-    display: none;
   }
 
   .cruise {
@@ -2026,10 +2031,6 @@ button,
     bottom: 17px;
   }
 
-  .cruise__card:hover {
-    padding: 36px 25px;
-  }
-
   .booking {
     padding: 60px 0 65px;
     background-image: url("../img/booking_mobile.jpg");
@@ -2047,7 +2048,7 @@ button,
   }
 
   .booking__text p {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2056,12 +2057,12 @@ button,
     padding: 34px 29px 40px;
   }
 
-  .booking__form br {
+  .booking br {
     display: block;
   }
 
   .booking__form p {
-    margin-bottom: 27px;
+    margin-bottom: 29px;
     line-height: 25px;
     text-align: center;
   }

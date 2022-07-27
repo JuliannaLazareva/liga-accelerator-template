@@ -46,6 +46,9 @@ li {
 a {
   color: $color-default-white;
   text-decoration: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 img,
@@ -75,6 +78,9 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 
   &::placeholder {
     opacity: 1;

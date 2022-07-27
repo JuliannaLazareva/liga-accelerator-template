@@ -66,23 +66,13 @@
 
   @include vp-1365 {
     width: 206px;
-    padding: 72px 15px 19px 20px;
+    padding: 70px 15px 19px 20px;
   }
 
   @include vp-767 {
     width: 290px;
     padding-top: 70px;
     padding-bottom: 19px;
-  }
-}
-
-.advantages__block br {
-  @include vp-1365 {
-    display: none;
-  }
-
-  @include vp-767 {
-    display: block;
   }
 }
 
@@ -145,7 +135,7 @@
 
 .advantages__block h3 {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
@@ -183,17 +173,7 @@
   }
 
   @include vp-767 {
-    width: 210px;
-  }
-}
-
-.advantages__block--all-inclusive br {
-  @include vp-1365 {
-    display: none;
-  }
-
-  @include vp-767 {
-    display: block;
+    width: 220px;
   }
 }
 
@@ -206,17 +186,5 @@
 
   @include vp-767 {
     width: 250px;
-  }
-}
-
-.advantages__block--zodiac-ship br {
-  display: none;
-
-  @include vp-1365 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
