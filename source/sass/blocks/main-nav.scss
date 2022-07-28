@@ -48,7 +48,8 @@
   .main-nav--opened {
     position: absolute;
     width: 285px;
-    min-height: 520px;
+    min-height: 100vh;
+    overflow: hidden;
     background-color: $color-default-white;
   }
 
@@ -71,21 +72,24 @@
     display: none;
   }
 
-  .main-nav--opened ul {
+  /*.main-nav--opened ul {
     position: absolute;
     top: 85px;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 10;
-  }
+  }*/
 
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
 
+  .main-nav--nojs {
+    padding-bottom: 80px;
+  }
+
   .main-nav--nojs ul {
-    position: absolute;
     display: block;
     top: 0;
     right: 0;

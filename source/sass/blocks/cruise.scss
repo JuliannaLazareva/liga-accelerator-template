@@ -1,7 +1,7 @@
 .cruise {
   padding: 111px 118px 120px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 91px 60px 100px;
   }
 
@@ -20,7 +20,7 @@
   text-align: center;
   letter-spacing: 0.02em;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 49px;
     font-size: 26px;
     line-height: 39px;
@@ -38,7 +38,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -56,7 +56,7 @@
   background: $black-to-bottom;
   background-size: cover;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 309px;
   }
 
@@ -69,7 +69,7 @@
   width: 260px;
   height: 386px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 309px;
   }
 
@@ -89,7 +89,7 @@
   line-height: 27px;
   letter-spacing: 0.01em;
 
-  @include vp-1365 {
+  @include vp-1023 {
     left: 35px;
     bottom: 27px;
   }
@@ -127,26 +127,35 @@
   margin: 0;
 }
 
-.cruise__card:hover {
+.cruise__card:hover,
+.cruise__card:focus,
+.cruise__card:focus-within {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   padding: 20px 25px;
   background: $color-default-black;
+  outline: none;
 }
 
-.cruise__card:hover img {
+.cruise__card:hover img,
+.cruise__card:focus img,
+.cruise__card:focus-within img {
   display: none;
 }
 
-.cruise__card:hover h3 {
+.cruise__card:hover h3,
+.cruise__card:focus h3,
+.cruise__card:focus-within h3 {
   position: relative;
   left: 0;
   bottom: 0;
   top: -7px;
 }
 
-.cruise__card:hover .cruise__info {
+.cruise__card:hover .cruise__info,
+.cruise__card:focus .cruise__info,
+.cruise__card:focus-within .cruise__info {
   display: flex;
   flex-direction: column;
 }

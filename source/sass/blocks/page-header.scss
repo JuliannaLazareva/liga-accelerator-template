@@ -11,7 +11,7 @@
   padding-top: 32px;
   padding-bottom: 35px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 25px 45px 30px 48px;
   }
 
@@ -33,7 +33,7 @@
 .page-header__logo-wrapper svg {
   fill: $color-default-white;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 38px;
     height: 20px;
   }
@@ -72,7 +72,7 @@
 .page-header__menu-wrapper li {
   margin-right: 36px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 26px;
   }
 
@@ -93,7 +93,7 @@
   font-weight: 500;
   line-height: 20px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
   }

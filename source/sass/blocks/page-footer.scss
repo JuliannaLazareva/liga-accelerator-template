@@ -10,7 +10,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-top: 47px;
   }
 
@@ -25,7 +25,7 @@
 .page-footer__logo-wrapper {
   margin-right: 30px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 15px;
   }
 
@@ -38,7 +38,7 @@
   width: 70px;
   height: auto;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 38px;
   }
 
@@ -61,7 +61,7 @@
 .page-footer__menu-wrapper li {
   margin-right: 16px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 5px;
   }
 
@@ -82,7 +82,7 @@
   font-weight: 500;
   line-height: 20px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 12px;
     line-height: 15px;
   }
@@ -112,7 +112,7 @@
   gap: 25px;
   max-width: 110px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     gap: 22px;
   }
 
@@ -129,7 +129,7 @@
   width: 20px;
   height: 20px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 16px;
     height: 16px;
   }

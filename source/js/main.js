@@ -9,17 +9,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const navMain = document.querySelector('.main-nav');
   const navToggle = document.querySelector('.main-nav__toggle');
+  const navLinks = document.querySelectorAll('.main-nav__link');
+
+  const onOpenMenu = () => {
+    document.querySelector('body').classList.add('modal__open');
+    document.querySelector('body').classList.add('modal__overlay');
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+  };
+
+  function onCloseMenu() {
+    document.querySelector('body').classList.remove('modal__open');
+    document.querySelector('body').classList.remove('modal__overlay');
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+  }
 
   navMain.classList.remove('main-nav--nojs');
 
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
+      onOpenMenu();
     } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
+      onCloseMenu();
     }
+  });
+
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', onCloseMenu);
   });
 
   // Utils

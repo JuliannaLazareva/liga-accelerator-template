@@ -54,6 +54,8 @@
     height: 100%;
 
     cursor: pointer;
+    background-color: rgba(0, 43, 102, 0.5);
+    z-index: 1;
   }
 
   &__content {
@@ -116,4 +118,9 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__open {
+  height: 100vh;
+  overflow: hidden;
 }
