@@ -51,7 +51,8 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: 386px;
+  height: 386px;
+  overflow-y: auto;
   color: $color-default-white;
   background: $black-to-bottom;
   background-size: cover;
