@@ -1,12 +1,10 @@
 .page-footer {
   position: relative;
-  min-height: 138px;
   background-color: $color-default-black;
 }
 
 .page-footer__wrapper {
   display: flex;
-  align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -16,9 +14,13 @@
 
   @include vp-767 {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
+  }
+
+  @include vp-374 {
+    align-items: flex-start;
   }
 }
 
@@ -47,6 +49,22 @@
   }
 }
 
+.page-footer__menu-wrapper {
+  align-self: center;
+
+  @include vp-1023 {
+    align-self: flex-start;
+  }
+
+  @include vp-767 {
+    align-self: flex-end;
+  }
+
+  @include vp-374 {
+    align-self: flex-start;
+  }
+}
+
 .page-footer__menu-wrapper ul {
   display: flex;
   flex-wrap: wrap;
@@ -55,6 +73,11 @@
   @include vp-767 {
     flex-direction: column;
     margin-bottom: 22px;
+    text-align: right;
+  }
+
+  @include vp-374 {
+    text-align: left;
   }
 }
 
@@ -97,12 +120,20 @@
 }
 
 .page-footer__social-wrapper {
-  align-self: flex-end;
   margin-left: auto;
+  padding-top: 11px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
 
   @include vp-767 {
-    align-self: flex-start;
+    align-self: flex-end;
     margin: 0;
+  }
+
+  @include vp-374 {
+    align-self: flex-start;
   }
 }
 

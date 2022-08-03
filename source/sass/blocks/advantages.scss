@@ -52,8 +52,7 @@
   }
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: center;
   }
 }
@@ -71,6 +70,7 @@
 
   @include vp-767 {
     width: 290px;
+    margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 19px;
   }

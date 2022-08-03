@@ -39,6 +39,12 @@ window.addEventListener('DOMContentLoaded', () => {
     navLink.addEventListener('click', onCloseMenu);
   });
 
+  window.addEventListener('click', function (evt) {
+    if (!evt.target.closest('.main-nav')) {
+      onCloseMenu();
+    }
+  });
+
   // Utils
   // ---------------------------------
 
